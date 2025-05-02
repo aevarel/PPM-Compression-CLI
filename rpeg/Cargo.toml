@@ -1,0 +1,10 @@
+[package]
+name = "rpeg"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+csc411_image = "0.5.2"
+csc411_arith = "0.1.0"
+bitpack = { path = "../bitpack" }
+regex = "1.4.0"

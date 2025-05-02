@@ -1,0 +1,17 @@
+# Rust build and cache files
+/target/
+/**/target/
+
+# IDE/editor config
+**/*.rs.bk
+.DS_Store
+*.swp
+*.swo
+*.log
+*.tmp
+.vscode/
+.idea/
+
+# Dependency lock for libraries (not needed)
+bitpack/Cargo.lock
+rpeg/Cargo.lock

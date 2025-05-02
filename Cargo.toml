@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "bitpack",
+    "rpeg"
+]
+default-members = ["rpeg"]
