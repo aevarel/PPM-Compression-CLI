@@ -1,4 +1,6 @@
-# Rpeg
+# Rust PPM Compression
+
+This project was outlined and implemented as an assignment project in Noah Daniels' CSC 411 coursework in Computer Organization. 
 
 The rpeg crate provides a module in which compression and decompression are implemented for the PPM image file type. It accomplishes this by using matrix arithmetic to convert from RGB values to component video code format, and compressing through encoding the values in bits, and decompressing by decoding the bits back to RGB values.
 
@@ -16,8 +18,10 @@ We would like to acknowledge the following individuals for their help and collab
 - Copilot AI
     - Copilot AI was used to help with the implementation of the project, as it helped with the syntax and structure of the code, as well as providing some ideas for the implementation of the project, and finishing documentation.
 
-## Implementation
-- Usage: rpeg [flags] [filename]
+## Usage
+
+- Simply run ```cargo build``` in the parent workspace directory, and utilize the produced ```rpeg``` binary in the ```./target``` directory.
+- ```rpeg [flags] [filename]```
     - [flags]
         - -d: Decompress procedure.
         - -c: Compression procedure.
@@ -26,6 +30,7 @@ We would like to acknowledge the following individuals for their help and collab
         - The name of the file to be decompressed, if using a PPM file to be compressed with the -c flag, or a compressed image file to be decompressed with the -d flag.  
         - If no filename is provided, the program will read from standard input.
             - The round trip flag will not work with standard input, as the program will not be able to read the compressed file from standard input.
+- **It is important to note that the compression will be performed *in-place,* meaning that the file will be overwritten in compression.**
 
 
 
@@ -70,3 +75,7 @@ As this is not the first attempt of the project, I'll go ahead and summarize it 
 
 - Hours spent analyzing the problems: 4 hours
 - Hours spent solving the problems: 15 hours
+
+### Design Documentation
+
+For full implementation details, design rationale, and project planning, see [design.pdf](./design.pdf).
